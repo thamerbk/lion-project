@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --green:#42c8b7;
+    --gray:#f6f6f6;
+    --dark:#304655;
+}
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+/* start navbar */
+.header .links {
+    position: relative;
+}
+.header .links ul {
+    position: absolute;
+    background-color: var(--gray);
+    top: calc(100% + 15px);
+    right: 0;
+    width: 200px;
+    display: none;
+}
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul::before {
+    content: "";
+    position: absolute;
+    border-width: 15px;
+    border-color: transparent transparent var(--gray) transparent;
+    border-style: solid;
+    top: -30px;
+    right: 0px;
+}
+.header .links ul a {
+    display: block;
+    border-bottom-color: rgb(220, 217, 217);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+.header .links ul a:hover{
+    padding-left: 10%;
+}
+/* end navber */
+/* start header */
+.mountain {
+    background-image: url(image/moun.jpg);
+    background-size: cover;
+    height: calc(100vh - 70px);
+    box-shadow: 0px 15px 20px 0px white inset;
+    font-size: 25px;
+}
+.mountain h1 {
+    font-size: 60px;
+    color: var(--green);
+}
+/* end header */
+/* start icon */
+.icon {
+    background-color: var(--gray);
+}
+.icon .ic {
+    color: var(--green);
+    font-size: 50px;
+}
+/* end icon */
+/* start service */
+.title .big-title {
+    font-weight: 800 !important;
+    font-size: 100px;
+    margin-bottom: -55px;
+    color:#ededed ;
+}
+@media (max-width: 575px) {
+    .title .big-title {
+        font-size: 60px;
+        margin-bottom: -40px;
+    }
+}
+.service .ic {
+    color: var(--green);
+    font-size: 40px;
+}
+.service img {
+    max-height: 350px;
+    position: relative;
+}
+.service .image::before {
+    content: "";
+    position: absolute;
+    background-color: var(--dark);
+    height: calc(100% + 100px);
+    width: 100px;
+    top: -50px;
+    right: 40px;
+}
+
+@media(max-width: 767px) {
+    .service {
+        text-align: center;
+    }
+}
+/* end service */
+/* start portfolio */
+.portfolio {
+    background-color: var(--gray);
+}
+/* end portfolio */
+/* start about */
+.about img {
+    width: 250px;
+}
+.line span {
+    content: "";
+    position: absolute;
+    border: 1.5px solid #36af9f;
+    width: 250px;
+}
+.about .image::before {
+    content: "";
+    position: absolute;
+    background-color: var(--gray);
+    width: 100px;
+    height: calc(100% + 80px);
+    z-index: -1;
+    top: -40px;
+    left: -20px;
+}
+.about .image::after {
+    content: "";
+    position: absolute;
+    border-left: 80px solid var(--green);
+    border-bottom: 80px solid var(--green);
+    height: 100%;
+    width: 200px;
+    top: -40px;
+    right: 30px;
+    z-index: -1;
+}
+/* end about */
+/* start contact */
+.contact {
+    background-color: var(--gray);
+}
+.contact .feel {
+    color: var(--dark);
+    font-weight: 900;
+}
+.contact .mail {
+    color: var(--green);
+    font-weight: 900;
+}
+/* end contact */
+/* start footer */
+.footer {
+    background-color: var(--dark);
+}
+.footer span {
+    color: var(--green);
+}
+/* end footer */
